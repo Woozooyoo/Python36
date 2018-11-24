@@ -31,7 +31,7 @@ emp02 = Employee("lisi", 400000, 48)
 del emp02.age
 # print emp02.age
 emp02.displayCount()
-attr = getattr(emp02, 'age', None)
+attr = getattr(emp02, 'age', None) # getattr = getOrElse(None)
 print(attr)
 print("emp02.__class__:", emp02.__class__)
 print()

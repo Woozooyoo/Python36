@@ -27,7 +27,7 @@ class Child(Parent):  # 定义子类
         print('调用子类方法 child method')
 
 
-print ("""
+print("""
 ===inheritance===""")
 c = Child()  # 实例化子类
 c.childMethod()  # 调用子类的方法
@@ -35,8 +35,7 @@ c.parentMethod()  # 调用父类方法
 c.setAttr(200)  # 再次调用父类的方法
 c.getAttr()  # 再次调用父类的方法
 
-
-print ("""
+print("""
 ===overload===""")
 
 
