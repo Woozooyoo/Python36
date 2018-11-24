@@ -5,12 +5,12 @@
 
 
 def print_func(par):
-    print ("Hello : ", par)
+    print("Hello : ", par)
     return
 
 
 def sum_func(x, y):
-    print ("sum : ", x + y)
+    print("sum : ", x + y)
     return
 
 
@@ -22,15 +22,15 @@ def sum_func(x, y):
 if __name__ == '__main__':  # 这个方法可以让 引用这个模块的其他模块不执行这里的方法
     print("in module_a   aaaaaaa")
 
-print ('in module a: ', __name__)
+print('in module a: ', __name__)
 
-# print __doc__
-#
-#
-# class A:
-#     def x(self):
-#         print 'haha'
-#
-#
-# print A.__module__
-# print A.__name__
+print(__doc__)
+
+
+class A:
+    def x(self):
+        print('haha')
+
+
+print(A.__module__)
+print(A.__name__)

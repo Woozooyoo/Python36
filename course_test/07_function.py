@@ -17,8 +17,8 @@ def changeme(mylist):
 mylist = [10, 20, 30]
 haha = changeme(mylist)
 print(haha)
-print("Values outside the function: ", mylist)
-print
+print("Values outside the function: ", mylist)  # 引用传递
+print()
 
 
 # 默认参数
@@ -34,12 +34,12 @@ def printinfo(name, age=35):
 printinfo(age=50, name="micheal")
 printinfo("monica")
 
-print ("""
+print("""
   可变参数 类似String.. args""")
 
 
 def printinfo(arg1, *vartuple):
-    "This prints a variable passed arguments"
+    """This prints a variable passed arguments"""
     print("Output is: ")
     print(arg1)
     print('可变参数类型是：', type(vartuple))
@@ -52,23 +52,24 @@ def printinfo(arg1, *vartuple):
 printinfo(10)
 printinfo(70, 60, 50)
 
-print ("""
+print("""
   定义lambda: anonymous fun""")
 sum = lambda arg1, arg2: arg1 + arg2  # lambda表达式
 # 调用
 print("Value of total : ", sum(10, 20))
 print("Value of total : ", sum(20, 20))
-print
+print()
 
-##返回多个值
+# 返回多个值
 tup = lambda x, y: (x + 1, y + 1)
 c = tup(2, 3)
 print(c[0], c[1])
-(a, b) = tup(2, 3)
 
+(a, b) = tup(2, 3)
 print(a, b)
-print(c[0], c[1])
-print
+
+print()
+
 
 def outfunc(func, x, y):
     c = func(x, y)

@@ -28,8 +28,8 @@ t.join()
 print("all over %s" % ctime())
 
 """
-i was listening to 爱情买卖. Wed Oct 03 15:12:25 2018
-i was at the 阿凡达! Wed Oct 03 15:12:25 2018
-i was listening to 爱情买卖. Wed Oct 03 15:12:26 2018
-i was at the 阿凡达! Wed Oct 03 15:12:30 2018
-all over Wed Oct 03 15:12:35 2018"""
+i was listening to 爱情买卖. Wed Oct 03 15:12:   《25》 2018
+i was at the 阿凡达! Wed Oct 03 15:12:   《25》 2018
+i was listening to 爱情买卖. Wed Oct 03 15:12:   《26》 2018
+i was at the 阿凡达! Wed Oct 03 15:12:   《30》 2018
+all over Wed Oct 03 15:12:   《35》 2018"""

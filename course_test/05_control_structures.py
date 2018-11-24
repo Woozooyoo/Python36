@@ -13,7 +13,7 @@ if var2:
 # 如果是数字，则只要不等于0，就为true
 # 如果是字符串，则只要不是空串，就为true
 
-print ("""
+print("""
 if else""")
 var = 100
 if var == 200:
@@ -29,7 +29,7 @@ else:
     print("4 - Got a false expression value")
     print(var)
 
-print ("""
+print("""
 嵌套if else""")
 var = 100
 if var < 200:
@@ -45,7 +45,7 @@ elif var < 50:
 else:
     print("Could not find true expression")
 
-print ("""
+print("""
  while循环""")
 count = 0
 while count < 5:
@@ -54,7 +54,7 @@ while count < 5:
 else:
     print(count, " is not less than 5")
 
-print ("""
+print("""
  for循环""")
 # 求素数
 for num in range(10, 20):
@@ -67,7 +67,7 @@ for num in range(10, 20):
     else:
         print(num, 'is a prime number')
 
-print
+print()
 # 遍历集合
 r = range(10, 15)  # list
 print(r)
@@ -89,7 +89,7 @@ print(r)
 for num in r.values():
     print(num),
 
-print ("""
+print("""
 
  斐波那契数列""")
 a = 0
@@ -98,8 +98,7 @@ while b < 1000:
     print(b),
     a, b = b, a + b
 
-print
-
+print()
 # 递归方式实现 生成前20项
 lis = []
 for i in range(20):
@@ -109,7 +108,7 @@ for i in range(20):
         lis.append(lis[i - 2] + lis[i - 1])  # 从第3项开始每项值为前两项值之和
 print(lis)
 
-print ("""
+print("""
  冒泡排序""")
 
 
@@ -125,7 +124,7 @@ nums = [5, 2, 45, 6, 8, 2, 1]
 
 print(bubbleSort(nums))
 
-print ("""
+print("""
  有序数组中的二分查找""")
 key = int(input("请输入您要查找的整数："))
 c = [10, 11, 12, 17, 19, 21, 22, 24, 32, 38, 49, 51, 66, 78, 90]
@@ -148,7 +147,7 @@ def BinarySearch(key, c):
 
 BinarySearch(key, c)
 
-print ("""
+print("""
  快速排序""")
 
 
@@ -176,4 +175,4 @@ arr = [1, 4, 7, 1, 5, 5, 3, 85, 34, 75, 23, 75, 2, 0]
 
 print("initial array:", arr)
 QuickSort(arr, 0, len(arr) - 1)
-print ("result array:", arr)
+print("result array:", arr)

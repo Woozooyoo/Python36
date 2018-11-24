@@ -25,6 +25,8 @@ print(emp01.name)
 print(emp01.salary)
 emp01.displayCount()
 emp01.displayEmployee()
+print()
+
 emp02 = Employee("lisi", 400000, 48)
 del emp02.age
 # print emp02.age
@@ -32,7 +34,7 @@ emp02.displayCount()
 attr = getattr(emp02, 'age', None)
 print(attr)
 print("emp02.__class__:", emp02.__class__)
-print
+print()
 
 print("Employee.__doc__:", Employee.__doc__)
 print("Employee.__name__:", Employee.__name__)
