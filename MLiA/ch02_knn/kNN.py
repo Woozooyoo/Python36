@@ -36,10 +36,10 @@ def createDataSet():
     labels = ['A', 'A', 'B', 'B']
     return group, labels
 
-# # 简单分类器测试
-# group, labels = createDataSet()
-# res = classify0([3, 3], group, labels, 3)  # k取最近的3个
-# print res
+# 简单分类器测试
+group, labels = createDataSet()
+res = classify0([3, 3], group, labels, 3)  # k取最近的3个
+print(res)
 
 # 文件变矩阵
 def file2matrix(filename):
@@ -59,22 +59,22 @@ def file2matrix(filename):
 
 
 # 图形化展现
-# datingDataMat, datingLabels = file2matrix('datingTestSet2.txt')
-#
-# # 二维图 丢失维度
-# ax = plt.figure().add_subplot(111)
-# # 第一个参数 横坐标集合 第二个参数纵坐标集合 第三个参数圆点大小 第四个参数
-# ax.scatter(datingDataMat[:,0],datingDataMat[:,1],15.0*array(datingLabels),15.0*array(datingLabels))
-# plt.show()
+datingDataMat, datingLabels = file2matrix('datingTestSet2.txt')
+
+# 二维图 丢失维度
+ax = plt.figure().add_subplot(111)
+# 第一个参数 横坐标集合 第二个参数纵坐标集合 第三个参数圆点大小 第四个参数
+ax.scatter(datingDataMat[:,0],datingDataMat[:,1],15.0*array(datingLabels),15.0*array(datingLabels))
+plt.show()
 
 # 三维图 展示
-# ax = plt.subplot(111, projection='3d')  # 创建一个三维的绘图工程
-# #  将数据点分成三部分画，在颜色上有区分度
-# ax.scatter(datingDataMat[:, 0], datingDataMat[:, 1], datingDataMat[:, 2], c=15.0 * array(datingLabels))  # 绘制数据点
-# ax.set_zlabel('Z')  # 坐标轴
-# ax.set_ylabel('Y')
-# ax.set_xlabel('X')
-# plt.show()
+ax = plt.subplot(111, projection='3d')  # 创建一个三维的绘图工程
+#  将数据点分成三部分画，在颜色上有区分度
+ax.scatter(datingDataMat[:, 0], datingDataMat[:, 1], datingDataMat[:, 2], c=15.0 * array(datingLabels))  # 绘制数据点
+ax.set_zlabel('Z')  # 坐标轴
+ax.set_ylabel('Y')
+ax.set_xlabel('X')
+plt.show()
 
 def autoNorm(dataSet):  # 归一化
     minVals = dataSet.min(0)  # 三列每一列的最小值   [0, 0, 10]
