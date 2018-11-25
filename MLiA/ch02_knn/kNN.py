@@ -8,7 +8,7 @@ Input:      inX: 待分类向量 (1xN)
             labels: 先验数据分类标签 (1xM vector)
             k: 参数：k个近邻 (should be an odd number)
 
-Output:     分类标签
+Output:     the most popular class label 分类标签
 """
 from numpy import *
 import operator
