@@ -5,6 +5,8 @@ Decision Tree Source Code for Machine Learning in Action Ch. 3
 '''
 from math import log
 import operator
+from machinelearninginaction3x.Ch03_decisiontree import treePlotter
+
 
 def createDataSet():
     dataSet = [[1, 1, 'yes'],
@@ -28,6 +30,13 @@ def calcShannonEnt(dataSet):
         prob = float(labelCounts[key])/numEntries
         shannonEnt -= prob * log(prob, 2) #log base 2
     return shannonEnt
+
+
+myDat, labels = createDataSet()
+print(myDat)
+print(calcShannonEnt(myDat))
+
+
 
 def splitDataSet(dataSet, axis, value):
     retDataSet = []
@@ -81,8 +90,15 @@ def createTree(dataSet, labels):
         myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), subLabels)
     return myTree
 
-def classify(inputTree, featLabels, testVec):
-    firstStr = list(inputTree)[0]
+
+myDat, labels = createDataSet()
+mytree = createTree(myDat, labels)
+print(mytree)
+treePlotter.createPlot(mytree)
+
+
+def classify(inputTree,featLabels,testVec):
+    firstStr = list(inputTree.keys())[0]
     secondDict = inputTree[firstStr]
     featIndex = featLabels.index(firstStr)
     key = testVec[featIndex]
@@ -92,7 +108,14 @@ def classify(inputTree, featLabels, testVec):
     else: classLabel = valueOfFeat
     return classLabel
 
-def storeTree(inputTree, filename):
+
+myDat, labels = createDataSet()
+mytree = treePlotter.retrieveTree(0)
+print(classify(mytree, labels, [1, 0]))
+print(classify(mytree, labels, [1, 1]))
+
+
+def storeTree(inputTree,filename):
     import pickle
     fw = open(filename, 'wb')
     pickle.dump(inputTree, fw)
@@ -103,3 +126,6 @@ def grabTree(filename):
     fr = open(filename, 'rb')
     return pickle.load(fr)
 
+
+storeTree(mytree, './classifierStorage.txt')
+grabTree('./classifierStorage.txt')
