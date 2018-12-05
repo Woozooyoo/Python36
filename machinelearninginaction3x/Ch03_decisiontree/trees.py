@@ -3,6 +3,7 @@ Created on Oct 12, 2010
 Decision Tree Source Code for Machine Learning in Action Ch. 3
 @author: Peter Harrington
 '''
+# coding=utf-8
 from math import log
 import operator
 from machinelearninginaction3x.Ch03_decisiontree import treePlotter
@@ -94,7 +95,7 @@ def createTree(dataSet, labels):
 myDat, labels = createDataSet()
 mytree = createTree(myDat, labels)
 print(mytree)
-treePlotter.createPlot(mytree)
+# treePlotter.createPlot(mytree)
 
 
 def classify(inputTree,featLabels,testVec):
@@ -128,4 +129,16 @@ def grabTree(filename):
 
 
 storeTree(mytree, './classifierStorage.txt')
-grabTree('./classifierStorage.txt')
+print(grabTree('./classifierStorage.txt'))
+
+
+def lenseTrees():
+    fr = open('./lenses.txt')
+    lenses = [inst.strip().split('\t') for inst in fr.readline()]
+    lensesLabels = ['age', 'prescript', 'astigmatic', 'tearRate']
+    lensesTree = createTree(lenses, lensesLabels)
+    print(lensesTree)
+    # treePlotter.createPlot(lensesTree)
+
+
+lenseTrees()

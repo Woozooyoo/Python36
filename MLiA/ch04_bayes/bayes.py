@@ -104,7 +104,7 @@ def bagOfWords2VecMN(vocabList, inputSet):
 # 邮件分类
 def textParse(bigString):  # input is big string, #output is word list
     import re
-    listOfTokens = re.split(r'\W*', bigString)  # 正则表达式进行文本解析
+    listOfTokens = re.split(r'\W+', bigString)  # 正则表达式进行文本解析
     return [tok.lower() for tok in listOfTokens if len(tok) > 2]  # 过滤长度小于3的
 
 
