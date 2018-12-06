@@ -1,7 +1,8 @@
 '''
 Created on Mar 8, 2011
-
 @author: Peter
+
+Simplifying data with the singular value decomposition
 '''
 from numpy import *
 from numpy import linalg as la

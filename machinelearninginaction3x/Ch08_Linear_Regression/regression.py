@@ -1,7 +1,8 @@
 '''
 Created on Jan 8, 2011
-
 @author: Peter
+
+Linear Regression: Predicting numeric values
 '''
 from numpy import *
 

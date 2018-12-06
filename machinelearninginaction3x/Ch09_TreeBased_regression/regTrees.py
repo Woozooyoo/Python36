@@ -2,6 +2,8 @@
 Created on Feb 4, 2011
 Tree-Based Regression Methods
 @author: Peter Harrington
+
+Tree-based regression:  ClassificationAndRegressionTrees
 '''
 from numpy import *
 

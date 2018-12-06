@@ -1,7 +1,8 @@
 '''
 Created on Jun 1, 2011
-
 @author: Peter Harrington
+
+Other PCA dimensionality reduction
 '''
 from numpy import *
 

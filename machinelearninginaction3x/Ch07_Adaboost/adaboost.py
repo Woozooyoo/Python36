@@ -2,6 +2,8 @@
 Created on Nov 28, 2010
 Adaboost is short for Adaptive Boosting
 @author: Peter
+
+Improving classification with a meta-algorithm
 '''
 from numpy import *
 
