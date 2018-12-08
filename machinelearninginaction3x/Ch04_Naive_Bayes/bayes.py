@@ -142,7 +142,7 @@ def spamTest():
 
 
 # 垃圾邮件分类数据测试  -------------------------------------------------------------------------------
-spamTest()
+# spamTest()
 
 def calcMostFreq(vocabList, fullText):
     import operator
