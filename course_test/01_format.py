@@ -7,6 +7,7 @@
 if True:
     print("Answer")
     print("True")
+    print('1'.zfill(3))
 else:
     print("Answer")
     print("False")
