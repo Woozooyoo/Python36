@@ -59,7 +59,8 @@ def trainNB0(trainMatrix, trainCategory):
     p0Vect = np.log(p0Num / p0Denom)  # 避免下溢出或者浮点数舍入导致的错误   下溢出是由太多很小的数相乘得到的
     return p0Vect, p1Vect, pAbusive
 
-
+# 贝叶斯定理 P(0|vec) = P(0,vec)  /P(vec) = P(vec|0)*P(0)  /P(vec)
+# 即比较P(vec|0)*P(0) 0的大还是1的大    sum(vec2Classify * p1Vec)就是P(vec|0)
 def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):
     p1 = sum(vec2Classify * p1Vec) + np.log(pClass1)    #element-wise mult
     p0 = sum(vec2Classify * p0Vec) + np.log(1.0 - pClass1)
@@ -89,7 +90,7 @@ def testingNB():
 
 
 # 调用测试方法 ------------------------------------------------------------------------------------------------------
-testingNB()
+# testingNB()
 
 
 def bagOfWords2VecMN(vocabList, inputSet):

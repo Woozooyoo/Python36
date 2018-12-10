@@ -30,6 +30,9 @@ def gradAscent(dataMatIn, classLabels):
         weights = weights + alpha * dataMatrix.transpose()* error #matrix mult
     return weights
 
+dataArr,labelMat = loadDataSet()
+# print(gradAscent(dataArr, labelMat))
+
 def plotBestFit(weights):
     import matplotlib.pyplot as plt
     dataMat, labelMat = loadDataSet()
@@ -52,6 +55,9 @@ def plotBestFit(weights):
     plt.xlabel('X1'); plt.ylabel('X2')
     plt.show()
 
+
+plotBestFit(gradAscent(dataArr, labelMat).getA())
+
 def stocGradAscent0(dataMatrix, classLabels):
     m, n = np.shape(dataMatrix)
     alpha = 0.01
@@ -61,6 +67,9 @@ def stocGradAscent0(dataMatrix, classLabels):
         error = classLabels[i] - h
         weights = weights + alpha * error * dataMatrix[i]
     return weights
+
+
+plotBestFit(stocGradAscent0(np.array(dataArr), labelMat))
 
 def stocGradAscent1(dataMatrix, classLabels, numIter=150):
     m, n = np.shape(dataMatrix)
@@ -75,6 +84,9 @@ def stocGradAscent1(dataMatrix, classLabels, numIter=150):
             weights = weights + alpha * error * dataMatrix[randIndex]
             del(dataIndex[randIndex])
     return weights
+
+
+plotBestFit(stocGradAscent1(np.array(dataArr), labelMat))
 
 def classifyVector(inX, weights):
     prob = sigmoid(sum(inX*weights))
@@ -110,4 +122,5 @@ def multiTest():
     for k in range(numTests):
         errorSum += colicTest()
     print("after %d iterations the average error rate is: %f" % (numTests, errorSum/float(numTests)))
-        
+
+multiTest()
