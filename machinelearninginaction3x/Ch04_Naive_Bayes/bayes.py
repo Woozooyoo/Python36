@@ -125,7 +125,7 @@ def spamTest():
     for i in range(10):  # 随机构建训练集
         randIndex = int(np.random.uniform(0, len(trainingSet)))  # 得到0到50的随机数索引
         testSet.append(trainingSet[randIndex])  # 随机挑选一个文档索引号放入testSet
-        del (list(trainingSet)[randIndex])  # 从trainingSet删掉到testSet的 剩下要训练的索引
+        del trainingSet[randIndex]  # 从trainingSet删掉到testSet的 剩下要训练的索引
     trainMat = []
     trainClasses = []
     for docIndex in trainingSet:  # the classifier (get probs) trainNB0
@@ -143,7 +143,7 @@ def spamTest():
 
 
 # 垃圾邮件分类数据测试  -------------------------------------------------------------------------------
-# spamTest()
+spamTest()
 
 def calcMostFreq(vocabList, fullText):
     import operator

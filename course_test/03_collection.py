@@ -18,6 +18,7 @@ print(list)  # extend 后list改变
 list[0] = "python"
 list.append(['yyyy', 'zzzz'])   # 添加这个list为元素
 list.extend(['angelababy', 66666])  # 追加成列表
+del list[len(list)-1]
 print(list)
 
 print("""

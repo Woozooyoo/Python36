@@ -56,7 +56,7 @@ def plotBestFit(weights):
     plt.show()
 
 
-plotBestFit(gradAscent(dataArr, labelMat).getA())
+# plotBestFit(gradAscent(dataArr, labelMat).getA())
 
 def stocGradAscent0(dataMatrix, classLabels):
     m, n = np.shape(dataMatrix)
@@ -69,7 +69,7 @@ def stocGradAscent0(dataMatrix, classLabels):
     return weights
 
 
-plotBestFit(stocGradAscent0(np.array(dataArr), labelMat))
+# plotBestFit(stocGradAscent0(np.array(dataArr), labelMat))
 
 def stocGradAscent1(dataMatrix, classLabels, numIter=150):
     m, n = np.shape(dataMatrix)
